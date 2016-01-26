@@ -1,30 +1,52 @@
 extends Spatial
 
-var delta
 var position
+var rotation
+
 var right
 var left
+var up
+var down
 
 func _ready():
 	set_process(true)
 	set_process_input(true)
-	position = get_rotation()
+	rotation = get_rotation()
+	position = get_translation()
 
 func _process(delta):
-	self.delta = delta
 	if right == true:
-		position.y += 10*delta
-		set_rotation(position)
+		rotation.y -= 5*delta
+		set_rotation(rotation)
 	elif left == true:
-		position.y -= 10*delta
-		set_rotation(position)
+		rotation.y += 5*delta
+		set_rotation(rotation)
+	if up == true:
+		translate(Vector3(0, 0, -7*delta))
+	elif down == true:
+		translate(Vector3(0, 0, 7*delta))
+
 
 func _input(event):
 	if Input.is_key_pressed(KEY_RIGHT):
 		right = true
 	elif not Input.is_key_pressed(KEY_RIGHT):
 		right = false
+
+
 	if Input.is_key_pressed(KEY_LEFT):
 		left= true
 	elif not Input.is_key_pressed(KEY_LEFT):
 		left = false
+
+
+	if Input.is_key_pressed(KEY_UP):
+		up = true
+	elif not Input.is_key_pressed(KEY_UP):
+		up = false
+
+
+	if Input.is_key_pressed(KEY_DOWN):
+		down = true
+	elif not Input.is_key_pressed(KEY_DOWN):
+		down = false
