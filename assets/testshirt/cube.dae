@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<asset>
+	<contributor>
+		<author> Anonymous </author>
+		<authoring_tool> Collada Exporter for Blender 2.6+, by Juan Linietsky (juan@codenix.com) </authoring_tool>
+	</contributor>
+	<created>2016-01-28T18:39:18Z     </created>
+	<modified>2016-01-28T18:39:18Z</modified>
+	<unit meter="1.0" name="meter"/>
+	<up_axis>Z_UP</up_axis>
+</asset>
+<library_images>
+	<image id="id-image-3" name="Wrinkled-T-shirt_-front-29_99.png.001">
+		<init_from>images/Wrinkled-T-shirt_-front-29_99.png</init_from>
+	</image>
+</library_images>
+<library_effects>
+	<effect id="id-fx-2" name="Material-fx">
+		<profile_COMMON>
+			<newparam sid="id-fx_surf-4">
+				<surface type="2D">
+					<init_from>id-image-3</init_from>
+					<format>A8R8G8B8</format>
+				</surface>
+			</newparam>
+			<newparam sid="id-fx_sampler-5">
+				<sampler2D>
+					<source>id-fx_surf-4</source>
+				</sampler2D>
+			</newparam>
+			<technique sid="common">
+				<blinn>
+					<emission>
+						<color>  0.0 0.0 0.0 1.0  </color>
+					</emission>
+					<ambient>
+						<color>  0.0 0.0 0.0 1.0  </color>
+					</ambient>
+					<diffuse>
+						<texture texture="id-fx_sampler-5" texcoord="CHANNEL1"/>
+					</diffuse>
+					<specular>
+						<color>  0.5 0.5 0.5 1.0 </color>
+					</specular>
+					<shininess>
+						<float>50</float>
+					</shininess>
+					<reflective>
+						<color>  1.0 1.0 1.0 1.0 </color>
+					</reflective>
+					<transparency>
+						<float>0.0</float>
+					</transparency>
+					<index_of_refraction>
+						<float>4.0</float>
+					</index_of_refraction>
+				</blinn>
+				<extra>
+					<technique profile="FCOLLADA">
+					</technique>
+					<technique profile="GOOGLEEARTH">
+						<double_sided>0</double_sided>
+					</technique>
+				</extra>
+			</technique>
+		</profile_COMMON>
+	</effect>
+</library_effects>
+<library_materials>
+	<material id="id-material-6" name="Material">
+		<instance_effect url="#id-fx-2"/>
+	</material>
+</library_materials>
+<library_geometries>
+	<geometry id="id-mesh-7" name="Cube">
+		<mesh>
+			<source id="id-mesh-7-positions">
+				<float_array id="id-mesh-7-positions-array" count="72"> -1.0 1.0 1.0 -1.0 1.0 -1.0 -1.0 -1.0 -1.0 1.0 1.0 1.0 1.0 1.0 -1.0 -1.0 1.0 -1.0 1.0 -1.0 1.0 1.0 -1.0 -1.0 1.0 1.0 -1.0 -1.0 -1.0 1.0 -1.0 -1.0 -1.0 1.0 -1.0 -1.0 -1.0 1.0 -1.0 1.0 1.0 -1.0 1.0 -1.0 -1.0 1.0 1.0 1.0 -1.0 1.0 1.0 -1.0 -1.0 1.0 -1.0 -1.0 1.0 -1.0 1.0 1.0 1.0 1.0 1.0 1.0 -1.0 1.0 -1.0 -1.0 -1.0 1.0 -1.0 1.0</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-7-positions-array" count="24" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-7-normals">
+				<float_array id="id-mesh-7-normals-array" count="72"> -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 -1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 -1.0 0.0 0.0 1.0</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-7-normals-array" count="24" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-7-tangents">
+				<float_array id="id-mesh-7-tangents-array" count="72"> 0.0 -1.0 6.134042962457897e-08 0.0 -1.0 1.2268085924915795e-07 0.0 -1.0 6.134042962457897e-08 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 -1.0 1.1905819263802186e-07 0.0 -1.0 0.0 0.0 -1.0 1.1905819263802186e-07 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 0.0 -1.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 -1.0 2.3811638527604373e-07 0.0 1.0 0.0 0.0</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-7-tangents-array" count="24" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-7-bitangents">
+				<float_array id="id-mesh-7-bitangents-array" count="72"> -0.0 -6.134042962457897e-08 -1.0 -0.0 -1.2268085924915795e-07 -1.0 -0.0 -6.134042962457897e-08 -1.0 -0.0 -0.0 1.0 -0.0 -0.0 1.0 -0.0 -0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.0 -1.0 0.0 -0.0 -1.0 0.0 -0.0 -1.0 -1.1905819263802186e-07 -1.0 -0.0 -0.0 -1.0 -0.0 -1.1905819263802186e-07 -1.0 -0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 -0.0 -0.0 -1.0 -0.0 -0.0 1.0 0.0 0.0 1.0 0.0 -0.0 -1.0 -2.3811638527604373e-07 -1.0 -0.0 0.0 1.0 0.0</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-7-bitangents-array" count="24" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-7-texcoord-0">
+				<float_array id="id-mesh-7-texcoord-0-array" count="48"> 0.012296736240386963 0.01586371287703514 0.012296617031097412 0.9875661730766296 0.9801375865936279 0.9875662922859192 0.979235827922821 1.0103257894515991 0.979235827922821 1.0103257894515991 0.014412641525268555 1.0103257894515991 0.02691471017897129 0.9796431660652161 0.02691471017897129 0.010978709906339645 0.9820382595062256 0.010978709906339645 0.014412641525268555 0.009056857787072659 0.014412641525268555 0.009056857787072659 0.979235827922821 0.009056857787072659 0.9792358875274658 0.00905680749565363 0.01441270112991333 0.00905680749565363 0.01441258192062378 1.0103256702423096 0.979235827922821 1.0103257894515991 0.014412641525268555 1.0103257894515991 0.014412641525268555 0.009056857787072659 0.9801377058029175 0.01586371287703514 0.014412641525268555 1.0103257894515991 0.9820382595062256 0.9796431660652161 0.979235827922821 0.009056857787072659 0.9792357683181763 1.0103259086608887 0.979235827922821 0.009056857787072659</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-7-texcoord-0-array" count="24" stride="2">
+					<param name="S" type="float"/>
+					<param name="T" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<vertices id="id-mesh-7-vertices">
+				<input semantic="POSITION" source="#id-mesh-7-positions"/>
+			</vertices>
+			<triangles count="12" material="id-trimat-8">
+				<input semantic="VERTEX" source="#id-mesh-7-vertices" offset="0"/>
+				<input semantic="NORMAL" source="#id-mesh-7-normals" offset="0"/>
+				<input semantic="TEXCOORD" source="#id-mesh-7-texcoord-0" offset="0" set="0"/>
+				<input semantic="TEXTANGENT" source="#id-mesh-7-tangents" offset="0"/>
+				<input semantic="TEXBINORMAL" source="#id-mesh-7-bitangents" offset="0"/>
+				<p> 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 0 2 19 3 5 20 6 8 21 9 11 22 12 14 23 15 17 </p>
+			</triangles>
+		</mesh>
+	</geometry>
+</library_geometries>
+<library_controllers>
+</library_controllers>
+<library_cameras>
+</library_cameras>
+<library_lights>
+</library_lights>
+<library_visual_scenes>
+	<visual_scene id="id-scene-1" name="scene">
+		<node id="Cube" name="Cube" type="NODE">
+			<matrix sid="transform"> 9.984173774719238 0.0 0.0 -21.353404998779297 0.0 9.984173774719238 0.0 -6.984405517578125 0.0 0.0 9.984173774719238 3.5883655548095703 0.0 0.0 0.0 1.0  </matrix>
+			<instance_geometry url="#id-mesh-7">
+				<bind_material>
+					<technique_common>
+						<instance_material symbol="id-trimat-8" target="#id-material-6"/>
+					</technique_common>
+				</bind_material>
+			</instance_geometry>
+		</node>
+	</visual_scene>
+</library_visual_scenes>
+<library_animations>
+</library_animations>
+<scene>
+	<instance_visual_scene url="#id-scene-1" />
+</scene>
+</COLLADA>
