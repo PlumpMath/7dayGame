@@ -7,7 +7,7 @@ func _on_body_enter(body):
 	coin_spatial.hide()
 	sfx_player.play("coin_sfx")
 	get_node("/root/main").score_plus_one()
-	clear_shapes() #clears the bounding box
+	clear_shapes() #deletes the bounding box
 
 func _ready():
 	coin_spatial = get_node("Spatial")

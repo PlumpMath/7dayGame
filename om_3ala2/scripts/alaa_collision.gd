@@ -17,6 +17,9 @@ func _ready():
 	position = get_translation()
 
 func _process(delta):
+	if is_colliding():
+		coin = get_collider()
+		coin.hide()
 	
 	right = Input.is_key_pressed(KEY_RIGHT)
 	left = Input.is_key_pressed(KEY_LEFT)

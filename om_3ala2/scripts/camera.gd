@@ -6,8 +6,7 @@ var rotation
 var right
 var left
 var up
-var ctrl
-var space
+var down
 
 var coin
 
@@ -21,13 +20,15 @@ func _process(delta):
 	right = Input.is_key_pressed(KEY_RIGHT)
 	left = Input.is_key_pressed(KEY_LEFT)
 	up = Input.is_key_pressed(KEY_UP)
-	ctrl = Input.is_key_pressed(KEY_CONTROL)
+	down = Input.is_key_pressed(KEY_DOWN)
 	
-	if right == true:
+	if right:
 		rotation.y -= 5*delta
 		set_rotation(rotation)
-	elif left == true:
+	elif left:
 		rotation.y += 5*delta
 		set_rotation(rotation)
-	if up == true:
+	if up:
 		translate(Vector3(0, 0, -10*delta))
+	elif down:
+		translate(Vector3(0, 0, 10*delta))

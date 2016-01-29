@@ -18,7 +18,7 @@ func _fixed_process(delta):
 		play("run")
 	elif not up:
 		play("stop")
-	if c == true and up == true and get_current_animation() != "tackling":
+	if c and up and get_current_animation() != "tackling":
 		play("tackling")
-	if space == true:
+	if space and get_current_animation() != "jump":
 		play("jump")
